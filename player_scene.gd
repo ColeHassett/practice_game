@@ -18,6 +18,11 @@ func _process(delta):
 		velocity.y += speed
 	if Input.is_action_pressed("move_up"):
 		velocity.y -= speed
+	
+	if Input.is_key_pressed(KEY_E):
+		self.rotation_degrees += speed
+	if Input.is_key_pressed(KEY_Q):
+		self.rotation_degrees = 0
 		
 	self.position = Vector2(self.position.x + velocity.x, self.position.y + velocity.y)
 	
